@@ -1,0 +1,45 @@
+{
+  "name": "react-search-app",
+  "version": "0.0.0",
+  "description": "React app using FinCompare API to search companies data. Based of boilerplate from: (https://github.com/christinecha)",
+  "main": "app.js",
+  "scripts": {
+    "start": "start http://localhost:8080/ & webpack-dev-server --hot --progress",
+    "test": "jest"
+  },
+  "jest": {
+    "verbose": true
+  },
+  "author": "Erica Tavares <ericantavares@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0-beta.5",
+    "react-redux": "^4.4.5",
+    "react-router": "^3.0.2",
+    "react-test-renderer": "^16.0.0-alpha.12",
+    "redux": "^3.6.0",
+    "sass": "^0.5.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.17.0",
+    "babel-jest": "^22.4.3",
+    "babel-loader": "^6.4.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.25.0",
+    "enzyme": "^3.3.0",
+    "file-loader": "^1.1.11",
+    "jest": "^22.4.3",
+    "node-sass": "^3.10.1",
+    "react": "^15.6.2",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  }
+}

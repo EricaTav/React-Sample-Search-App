@@ -1,0 +1,256 @@
+@font-face {
+  font-family: 'ProximaNova-Light';
+  src: url('../styles/fonts/ProximaNovaLight.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  url('../styles/fonts/ProximaNovaLight.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('../styles/fonts/ProximaNova.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  url('../styles/fonts/ProximaNova.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+$greyFooter : #F4F6F7;
+$break-small: 670px;
+
+#app, #main {
+  width: 100vw;
+  height: 100vh;
+  overflow:hidden;
+  font-family: "ProximaNova-Light", Times, sans-serif;
+
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+#finCompare_logo{
+  float: right;
+  height: 50px;
+  @media screen and (max-width: $break-small) {
+    height: 35px;
+  }
+  padding: 30px 10px 30px 0px;
+}
+#dummy_logo{
+  @media screen and (max-width: $break-small) {
+    height: 90px;
+  }
+}
+
+hr{
+  width: 100vw;
+}
+#main h1{
+  color: #01223E;
+  text-shadow: darkgray;
+  text-shadow: 2px 2px 5px darkgrey;
+
+  text-align: center;
+  font-family: "ProximaNova-Light", Times, sans-serif;
+  margin-top: 10vh;
+  font-weight: 400;
+}
+#main_subtitle{
+  text-align: center;
+  font-family: "ProximaNova-Light", Times, sans-serif;
+  margin-top: 4vh;
+}
+.search-page{
+  padding-top: 5vh;
+  text-align: center;
+}
+p#searchInfo {
+  margin: 10px;
+}
+.search-page{
+  form{
+    input, button{
+      border-radius: 5px;
+      margin: 2px;
+    }
+    input{
+      width: 25vw;
+    }
+
+    button{
+        border: none;
+        background: #000;
+        color: #f2f2f2;
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 5px;
+        position: relative;
+        box-sizing: border-box;
+        transition: all 500ms ease;
+        width: 120px;
+        height: 50px;
+
+      &:before {
+        content:'';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 0px;
+        height: 50px;
+        background: rgba(255,255,255,0.3);
+        border-radius: 5px;
+
+        transition: all 0.8s ease;
+      }
+
+      &:hover:before {
+        width: 100%;
+      }
+    }
+
+  }
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: gainsboro;
+  color: white;
+  text-align: center;
+}
+
+.logo_wrapper{
+  img{
+    width: 15vw;
+    padding: 5px 8%;
+    max-width: 120px;
+  }
+}
+
+
+#bottom {
+  height: 100%;
+  margin-top: -180px;
+  padding-top: 180px;
+}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  border-box: box-sizing;
+  /* background-image: url('searchicon.png'); */
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  @media screen and (max-width: $break-small) {
+    font-size: 14px;
+  }
+}
+
+.dropdown-content{
+  padding-top: 10vh;
+}
+
+#dropDown-li{
+
+  a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    width: 36vw;
+    @media screen and (max-width: $break-small) {
+      width: 70vw;
+    }
+    margin: 0 auto;
+    background-color: $greyFooter;
+    overflow-y: hidden;
+    max-height: 220px;
+    cursor: pointer;
+    font-family: "ProximaNova-Light", Times, sans-serif;
+    &:hover {
+      background-color: lightslategrey;
+      color: white;
+    }
+  }
+}
+
+.user-page {
+  width: 65vw;
+  margin: 0 auto;
+  padding-top: 10vh;
+}
+
+.user-info{
+  .companyName{
+    font-size: 24px;
+    text-align: center;
+    width:100%;
+    background-color: aliceblue;
+    span{
+      margin: 24px;
+    }
+  }
+
+  .companyInfo {
+    display: inline-block;
+    margin-top: 45px;
+    width: 65vw;
+    p {
+      text-align: right;
+      display: inline-block;
+      width: 50%;
+      margin: 10px;
+      max-width: 40%;
+      margin-right: 24px;
+    }
+
+    h4 {
+      display: inline-block;
+      //width: 35%;
+      margin: 10px;
+      text-align: left;
+    }
+    div{
+      font-size: 18px;
+      outline: 5px solid white;
+      background-color: whitesmoke;
+    }
+    #companyInfo-reg {
+      text-align: right;
+      display: inline-block;
+      width: 50%;
+      max-height: 45px;
+
+      text-align: right;
+      display: inline-block;
+      width: 50%;
+    }
+    #companyInfo-id {
+      text-align: right;
+      display: inline-block;
+      width: 50%;
+      max-height: 45px;
+
+      text-align: right;
+      display: inline-block;
+      width: 50%;
+    }
+  }
+
+
+}
