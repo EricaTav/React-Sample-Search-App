@@ -1,5 +1,5 @@
 import React from 'react';
-import User from "./Company";
+import Company from "./Company";
 
 
 class Search extends React.Component {
@@ -16,10 +16,19 @@ class Search extends React.Component {
             }
         };
 
-        this.userInput = React.createRef();
+        this.searchInput = React.createRef();
+
+        this.handler = this.handler.bind(this);
 
         this._handleSubmit = this._handleSubmit.bind(this);
     }
+
+    handler(e){
+        this.setState({
+            isSelected: false
+        })
+    }
+
     _handleSubmit(e) {
         e.preventDefault();
         if(this.state.query ===null) return;
@@ -30,7 +39,7 @@ class Search extends React.Component {
         let dropDownField = document.getElementById('dropDown-li');
         if(dropDownField) dropDownField.innerHTML = "";
         this.setState({
-            query: this.refs.userInput.value
+            query: this.refs.searchInput.value
         }, () => {
             if(this.state.query.length > 0) this.bindEvent(this.state.query)
         })
@@ -86,7 +95,7 @@ class Search extends React.Component {
     render() {
 
         if(this.state.isSelected) {
-            return <User companyName={this.state.company.companyName} id={this.state.company.id} register_no={this.state.company.register_no} />
+            return <Company handler={this.handler} companyName={this.state.company.companyName} id={this.state.company.id} register_no={this.state.company.register_no}/>
         }
         return (
             <div className="search-page">
@@ -99,7 +108,7 @@ class Search extends React.Component {
                 <p id="searchInfo"></p>
                 <form className="dropdown" onSubmit= {this._handleSubmit}>
                     <div id="myDropdown" className="dropdown-content">
-                        <input autoComplete="off" ref="userInput" onChange={ e => this.handleInputChange(e)} className="search-page__input" placeholder="Unternehmensname" type="text" id="myInput" />
+                        <input autoComplete="off" ref="searchInput" onChange={ e => this.handleInputChange(e)} className="search-page__input" placeholder="Unternehmensname" type="text" id="myInput" />
                         <button className="btnSearch">Search</button>
                         <div id="dropDown-li"></div>
                     </div>

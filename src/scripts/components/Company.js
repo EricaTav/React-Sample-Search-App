@@ -44,6 +44,9 @@ class Company extends React.Component {
 
                     </div>
                 </div>
+                <div className="bottom-Nav">
+                    <button className="animatedBtn" onClick={this.props.handler}>Back</button>
+                </div>
             </div>
         );
     }
